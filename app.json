@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cart/cart",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#31c27c",
+    "navigationBarTitleText": "QQ",
+    "navigationBarTextStyle": "White",
+    "backgroundColor": "#000000",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "color": "#000000",
+    "selectedColor": "#e22018",
+    "backgroundColor": "#1195ee",
+    "borderStyle": "black",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/good.png",
+        "selectedIconPath": "img/star.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "img/sort.png",
+        "selectedIconPath": "img/star.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "img/cart.png",
+        "selectedIconPath": "img/star.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/star.png"
+      }
+    ]
+  },
+  "debug":true
+}

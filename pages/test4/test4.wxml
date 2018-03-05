@@ -1,0 +1,6 @@
+<text decode='d'>&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text>
+
+<slider step='100' backgroundColor='red' activeColor='black' min='40' max='200' show-value='true'></slider>
+
+<slider bindchange='test'></slider>
+<slider bindchanging='test1'></slider>

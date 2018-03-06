@@ -1,0 +1,8 @@
+/* pages/form/form.wxss */
+picker-view{
+  background: skyblue;
+  height: 400rpx;
+}
+.mask{
+  background: rgba(0,0,0,.4);
+}

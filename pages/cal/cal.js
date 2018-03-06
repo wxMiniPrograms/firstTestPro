@@ -86,6 +86,9 @@ Page({
     var temp = 0;
     for(var i = 0; i <= str.length; i ++){
       var ch = str.charAt(i);
+      if(ch == '='){
+        continue;
+      }
       if((ch != '' && ch >= 0 && ch <= 9) || ch == '.'){
         item += ch;
       }else{

@@ -1,0 +1,11 @@
+<view class='list'>
+  <view class='list-left'>地区：</view>
+  <view class="list-right {{flag ? '' : 'placeholder'}}">
+    <block wx:if="{{flag}}">
+      北京-海淀区
+    </block>
+    <block ex:else>请选择所在地</block>
+  </view>
+</view>
+
+<button disabled='{{!flag}}' type='primary'>提 交</button>

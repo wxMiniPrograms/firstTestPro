@@ -1,0 +1,41 @@
+<form bindsubmit='submit'>
+  <input value='2131243423' name='input'></input>
+  <radio-group name='radios'>
+    <radio value='男'>男</radio>
+    <radio value='女'>女</radio>
+  </radio-group>
+  <checkbox-group name='checkboxes'>
+    <checkbox value='羽毛球'>羽毛球</checkbox>
+    <checkbox value='排球'>排球</checkbox>
+    <checkbox value='足球'>足球</checkbox>
+  </checkbox-group>
+  <slider value='20' name='slider' show-value='true'></slider>
+  <switch checked='true'></switch>
+  <button form-type='reset' type='warn'>重置</button>
+  <button form-type='submit' type='primary'>提交</button>
+</form>
+
+<picker bindchange='pickderchange' value='{{value}}' range='{{objectArr}}' range-key='num'>
+  当前是：{{objectArr[value].num}}
+</picker>
+
+<picker bindchange='timechange' mode='time' start='12:30' end='12:30' value='12:30'>
+  时间：{{value}}
+</picker>
+
+<picker bindchange='datechange' fields='year' mode='date' value='1971-12-12'>
+  日期：{{value}}
+</picker>
+
+
+<picker-view value='{{[0,1,2]}}' mask-class='mask' bindchange='loop'>
+  <picker-view-column>
+    <view wx:for='{{pickers}}' wx:key='c'>{{item}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for='{{pickers}}' wx:key='b'>{{item}}</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for='{{pickers}}' wx:key='a'>{{item}}</view>
+  </picker-view-column>
+</picker-view>

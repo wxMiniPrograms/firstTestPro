@@ -1,5 +1,12 @@
 {
   "pages": [
+    "pages/picker/picker",
+    "pages/form/form",
+    "pages/label/label",
+    "pages/radio/radio",
+    "pages/switch/switch",
+    "pages/ES6/ES6",
+    "pages/test5/test5",
     "pages/cal/cal",
     "pages/test4/test4",
     "pages/test3/test3",

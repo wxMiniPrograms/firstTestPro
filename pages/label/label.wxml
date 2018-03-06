@@ -1,0 +1,2 @@
+<textarea bindblur='root' focus='{{flag}}' value='' placeholder='123' placeholder-style='color:red;'></textarea>
+<button type='primary' bindtap='test'>测试</button>

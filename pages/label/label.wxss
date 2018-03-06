@@ -1,0 +1,11 @@
+/* pages/label/label.wxss */
+input{
+  background: red;
+  margin: 100rpx;
+  padding: 0 20rpx;
+}
+textarea{
+  width: 750rpx;
+  padding-left: 30rpx;
+  background: skyblue;
+}

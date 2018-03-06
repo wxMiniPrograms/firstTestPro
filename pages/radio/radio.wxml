@@ -1,0 +1,13 @@
+<radio-group bindchange='radio'>
+    <radio value='男' color='#000' checked>男</radio>
+    <radio value='女' color='red' checked disabled='{{test}}'>女</radio>
+</radio-group>
+
+<checkbox-group bindchange='box'>
+  <block wx:for='{{balls}}' wx:for-item='ball'>
+    <block wx:for='{{color}}' wx:for-item='color'>
+      <checkbox checked value='{{ball}}' color='{{color}}'></checkbox>
+    </block>
+    <view></view>
+  </block>
+</checkbox-group>

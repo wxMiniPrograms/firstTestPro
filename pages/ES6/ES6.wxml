@@ -1,0 +1,1 @@
+<button type='warn' bindtap='test'>{{name}}</button>

@@ -1,0 +1,26 @@
+/* pages/picker/picker.wxss */
+page{
+  background: #f7f7f7;
+}
+
+.list{
+  display: flex;
+  background: #fff;
+  padding: 20rpx 40rpx;
+}
+
+.list-left{
+  width: 120rpx;
+}
+.list-right{
+  flex: 1;
+}
+
+button {
+  margin-top: 200rpx;
+  width: 700rpx;
+}
+
+.placeholder{
+  color: #ccc;
+}

@@ -1,11 +1,32 @@
 <view class='list'>
   <view class='list-left'>地区：</view>
-  <view class="list-right {{flag ? '' : 'placeholder'}}">
+  <view bindtap='showPicker' class="list-right {{flag ? '' : 'placeholder'}}">
     <block wx:if="{{flag}}">
-      北京-海淀区
+      {{provinceName[provinceIndex]}}-{{cityName[cityIndex]}}-{{countyName[countyIndex]}}
     </block>
-    <block ex:else>请选择所在地</block>
+    <block wx:else>请选择所在地</block>
   </view>
 </view>
 
 <button disabled='{{!flag}}' type='primary'>提 交</button>
+
+<view class='picker' hidden='{{show}}'>
+  <view class='btn-group'>
+    <view bindtap='cancel'>取消</view>
+    <view bindtap='sure'>确定</view>
+  </view>
+
+  <picker-view bindchange='pickerChange'>
+    <picker-view-column>
+      <view wx:for="{{provinceName}}" class='item'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{cityName}}" class='item'>{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countyName}}" class='item'>{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<view class='mask' bindtap='cancel' hidden='{{show}}'></view>

@@ -22,7 +22,9 @@ Page({
     cou: 0
   },
 
-  onLoad: function(){
+  onLoad: function(e){
+    console.log(e);
+    console.log(e.id);
     this.setSource();
   },
 

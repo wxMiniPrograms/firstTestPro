@@ -1,0 +1,2 @@
+<!-- <navigator url='../picker/picker' open-type='redirect'>点击</navigator> -->
+<button bindtap='test' type='warn'>测试</button>

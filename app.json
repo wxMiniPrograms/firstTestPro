@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/test6/test6",
+    "pages/showModal/showModal",
+    "pages/showToast/showToast",
+    "pages/showLoading/showLoading",
+    "pages/swiper/swiper",
+    "pages/navigator/navigator",
     "pages/picker/picker",
     "pages/form/form",
     "pages/label/label",

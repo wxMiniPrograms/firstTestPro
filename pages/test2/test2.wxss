@@ -1,5 +1,0 @@
-input{
-  height: 100rpx;
-  margin: 10rpx;
-  background: skyblue;
-}

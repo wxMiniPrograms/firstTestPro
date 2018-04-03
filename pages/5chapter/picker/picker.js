@@ -1,5 +1,5 @@
 // pages/picker/picker.js
-var source = require('../../base/data/source.js')
+var source = require('../../../base/data/source.js')
 
 Page({
   data: {

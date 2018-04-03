@@ -1,7 +1,8 @@
 // pages/test6/test6.js
 
-// var create = wx.createInnerAudioContext();
-// create.src
+var create = wx.createInnerAudioContext();
+create.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+create.autoplay = false;
 
 Page({
 
@@ -12,7 +13,33 @@ Page({
     src: "http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46",
     poster: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000",
     loop: true,
-    name: "金玉良缘"
+    name: "金玉良缘",
+    author: "李琦",
+    controls: true
+  },
+
+  play: function(){
+    create.play();
+  },
+  pause: function(){
+    create.pause();
+  },
+
+  playBackgroundAudio: function(){
+    wx.playBackgroundAudio({
+      dataUrl: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+    })
+  },
+  pauseBackgroundAudio: function(){
+    wx.pauseBackgroundAudio();
+  },
+  stopBackgroundAudio: function(){
+    wx.stopBackgroundAudio();
+  },
+  seekBackgroundAudio: function(){
+    wx.seekBackgroundAudio({
+      position: 30,
+    });
   },
 
   showActionSheet: function(){

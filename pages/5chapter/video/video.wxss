@@ -1,0 +1,7 @@
+/* pages/video/video.wxss */
+input{
+  height: 100rpx;
+  margin: 20rpx;
+  background: skyblue;
+  padding-left: 20rpx;
+}

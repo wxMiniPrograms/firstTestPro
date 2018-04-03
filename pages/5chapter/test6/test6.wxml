@@ -1,0 +1,9 @@
+ <button bindtap='showActionSheet'>showActionSheet</button> 
+<audio src="{{src}}" loop='{{loop}}' name='{{name}}' author='{{author}}' controls='{{controls}}' poster='{{poster}}'></audio>
+<button bindtap='play'>播放</button>
+<button bindtap='pause' type='warn'>停止</button>
+
+<button bindtap='playBackgroundAudio'>播放背景音乐</button>
+<button bindtap='pauseBackgroundAudio'>暂停背景音乐</button>
+<button bindtap='stopBackgroundAudio'>停止背景音乐</button>
+<button bindtap='seekBackgroundAudio'>seek背景音乐</button>

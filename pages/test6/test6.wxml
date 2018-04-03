@@ -1,2 +1,0 @@
-<!-- <button bindtap='showActionSheet'>showActionSheet</button> -->
-<audio src="{{src}}" loop='{{loop}}' name='{{name}}' author='{{author}}' controls='{{controls}}' poster='{{poster}}'></audio>

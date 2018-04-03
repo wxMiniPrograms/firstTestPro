@@ -1,0 +1,6 @@
+/* pages/test6/test6.wxss */
+audio{
+  height: 500rpx;
+  width: 750rpx;
+  margin-left: 50rpx;
+}

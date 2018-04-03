@@ -1,0 +1,5 @@
+<video id='my' poster='{{poster}}' bindplay='play' bindpause='pause' danmu-btn='true' danmu-list='{{list}}' src='{{src}}'></video>
+
+<input bindblur='blur' placeholder='请输入弹幕'></input>
+<button bindtap='send'>发送</button>
+<button bindtap='videoPlay'>播放</button>

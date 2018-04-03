@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/6chapter/request/request",
+    "pages/6chapter/setStorageSync/setStorageSync",
+    "pages/6chapter/test/test",
     "pages/5chapter/canvas/canvas",
     "pages/5chapter/image/image",
     "pages/5chapter/video/video",

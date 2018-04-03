@@ -1,0 +1,8 @@
+<view>
+  <input bindblur='blur' placeholder='请输入要保存的内容'></input>
+  <view bindtap='history' class='text'>查看历史</view>
+  <button bindtap='test' type='primary'>保存</button>
+
+  <button bindtap='remove' type='warn'>移除</button>
+  <button bindtap='clear' type='warn'>清除</button>
+</view>

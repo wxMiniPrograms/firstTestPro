@@ -1,0 +1,19 @@
+/* pages/6chapter/setStorageSync/setStorageSync.wxss */
+page{
+  background: #f7f7f7;
+}
+.text{
+  color: #3380eb;
+  text-align: right;
+}
+view{
+  padding: 20rpx;
+}
+input{
+  height: 85rpx;
+  background: #fff;
+  padding-left: 30rpx;
+}
+button{
+  margin: 180rpx 25rpx;
+}

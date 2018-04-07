@@ -1,0 +1,9 @@
+<view class='ul' id='{{index}}' bindtap='jump' hidden='{{!flag}}' wx:for='{{data}}' wx:key='{{u}}'>
+  <view class='li'>
+    <view class='left {{color[index]}}'>{{index+1}}</view>
+    <view class='center'>{{item.title}}</view>
+    <view class='right'>
+      <image src='../../../img/icon-arrow-right.png'></image>
+    </view>
+  </view>
+</view>

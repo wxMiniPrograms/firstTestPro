@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/6chapter/joke/joke",
+    "pages/6chapter/textJoke/textJoke",
     "pages/6chapter/request/request",
     "pages/6chapter/setStorageSync/setStorageSync",
     "pages/6chapter/test/test",

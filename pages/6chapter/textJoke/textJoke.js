@@ -1,37 +1,22 @@
-// pages/6chapter/request/request.js
-
-
-var util = require('../../../utils/config.js');
-
+// pages/6chapter/textJoke/textJoke.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
-  },
-
-  test: function(){
-    var appid = 56130;
-    var secret = '14ed8297aab74ea9a89382f2e98381de';
-    wx.request({
-      url: 'https://route.showapi.com/341-1',
-      data: {
-        showapi_appid: appid,
-        showapi_sign: secret
-      },
-      success: function(e){
-        console.log(e);
-      }
-    });
+    data: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(util);
+    var data = JSON.parse(options.data);
+    data.ct = data.ct.substring(0,10);
+    this.setData({
+      data: data
+    });
   },
 
   /**

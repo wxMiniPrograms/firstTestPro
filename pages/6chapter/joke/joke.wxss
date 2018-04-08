@@ -72,3 +72,9 @@ image{
   background: #f8b300;
   color: #fff;
 }
+
+.loading{
+  text-align: center;
+  padding: 10rpx;
+  color: #ccc;
+}

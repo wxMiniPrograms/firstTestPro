@@ -2,6 +2,7 @@
 
 var url = require('../../../utils/config.js');
 console.log(url);
+var pageNum =1;
 
 Page({
 
@@ -10,6 +11,8 @@ Page({
    */
   data: {
     flag: false,
+    loadingMore: false,
+    loadingOver: false,
     data: [],
     color: ['one','two','three']
   },
@@ -27,21 +30,30 @@ Page({
 
   request: function(){
     var self = this;
+    var time = new Date().getTime();
     wx.request({
       url: url.textJoke,
+      data: {
+        showapi_timestamp: time,
+        page: pageNum,
+        maxResult: 40
+      },
       success: function(e){
         console.log(e);
 
         var data = e.data.showapi_res_body.contentlist;
+        var list = self.data.data.concat(data);
         for(var i = 0; i < data.length; i ++){
           data[i].text = self.removeHtml(data[i].text);
         }
 
         self.setData({
-          data: data,
-          flag: true
+          data: list,
+          flag: true,
+          loadingMore: false
         });
         wx.hideLoading();
+        pageNum++;
       }
     });
   },
@@ -97,7 +109,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    this.setData({
+      loadingMore: true,
+      loadingOver: false
+    });
+    this.request();
   },
 
   /**

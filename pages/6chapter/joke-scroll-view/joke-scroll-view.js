@@ -1,7 +1,6 @@
 // pages/6chapter/joke/joke.js
 
 var url = require('../../../utils/config.js');
-var jumpFlag = true;
 // console.log(url);
 
 Page({
@@ -15,7 +14,7 @@ Page({
     loadingOver: false,
     pageNum: 1,
     data: [],
-    color: ['one','two','three']
+    color: ['one', 'two', 'three']
   },
 
   /**
@@ -29,7 +28,7 @@ Page({
     this.request();
   },
 
-  request: function(){
+  request: function () {
     var self = this;
     var time = new Date().getTime();
     wx.request({
@@ -39,12 +38,12 @@ Page({
         page: self.data.pageNum,
         maxResult: 40
       },
-      success: function(e){
+      success: function (e) {
         console.log(e);
 
         var data = e.data.showapi_res_body.contentlist;
         var length = data.length;
-        if(length === 0){
+        if (length === 0) {
           self.setData({
             loadingMore: false,
             loadingOver: true
@@ -54,7 +53,7 @@ Page({
         }
 
         var list = self.data.data.concat(data);
-        for(var i = 0; i < data.length; i ++){
+        for (var i = 0; i < data.length; i++) {
           data[i].text = self.removeHtml(data[i].text);
         }
 
@@ -64,44 +63,42 @@ Page({
           loadingMore: false
         });
         wx.hideLoading();
+        wx.stopPullDownRefresh();
       }
     });
   },
 
-  jump: function(e){
-    if(jumpFlag){
-      jumpFlag = false;
-      var id = e.currentTarget.id;
-      var temp = JSON.stringify(this.data.data[id]);
-      wx.navigateTo({
-        url: '../textJoke/textJoke?data=' + temp,
-      });
-    }
+  jump: function (e) {
+    var id = e.currentTarget.id;
+    var temp = JSON.stringify(this.data.data[id]);
+    wx.navigateTo({
+      url: '../textJoke/textJoke?data=' + temp,
+    })
   },
 
-  removeHtml: function(str){
-    return str.replace(/<[^>]+>/g,'');
+  removeHtml: function (str) {
+    return str.replace(/<[^>]+>/g, '');
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    jumpFlag = true;
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
@@ -109,6 +106,21 @@ Page({
    */
   onUnload: function () {
   
+  },
+
+  upper: function(){
+    wx.startPullDownRefresh({
+      
+    });
+  },
+
+  lower: function () {
+    this.setData({
+      loadingMore: true,
+      loadingOver: false,
+      pageNum: this.data.pageNum + 1
+    });
+    this.request();
   },
 
   /**
@@ -125,7 +137,7 @@ Page({
     this.setData({
       loadingMore: true,
       loadingOver: false,
-      pageNum: this.data.pageNum+1
+      pageNum: this.data.pageNum + 1
     });
     this.request();
   },
@@ -134,6 +146,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

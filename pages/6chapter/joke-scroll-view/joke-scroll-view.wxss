@@ -1,0 +1,80 @@
+/* pages/6chapter/joke/joke.wxss */
+.ul{
+  padding-left: .7143rem;
+  font-size: 1rem;
+  color: #333;
+  font-family: Microsoft Yahei;
+}
+
+.li{
+  width: 100%;
+  height: 4.0714rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  display: flex;
+}
+
+.left{
+  padding: 0 .5rem;
+  height: 1.0714rem;
+  line-height: 1.0714rem;
+  border-radius: .5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5357rem;
+  text-align: center;
+  font-size: 0.7143rem;
+  color: #999;
+  display: inline-block;
+}
+
+.center{
+  width: 100%;
+  padding: 0 2.657rem 0 2.0674rem;
+  line-height: 4.0714rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+image{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 1.3rem;
+  display: inline-block;
+}
+
+.one{
+  background: #e80000;
+  color: #fff;
+}
+
+.two{
+  background: #ff7200;
+  color: #fff;
+}
+
+.three{
+  background: #f8b300;
+  color: #fff;
+}
+
+.loading{
+  text-align: center;
+  padding: 10rpx;
+  color: #ccc;
+}

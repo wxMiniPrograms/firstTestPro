@@ -1,0 +1,7 @@
+<scroll-view scroll-y scroll-top='0' bindscrolltoupper='test'>
+  <view style='background: red'></view>
+  <view style='background: skyblue'></view>
+  <view style='background: black'></view>
+  <view style='background: blue'></view>
+  <view style='background: yellow'></view>
+</scroll-view>

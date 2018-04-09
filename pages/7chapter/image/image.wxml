@@ -1,0 +1,8 @@
+<button bindtap='test' type='primary'>image</button>
+
+<button bindtap='test1'>list</button>
+
+
+<button bindtap='previewImage'>预览图片</button>
+
+<image src='{{src}}'></image>

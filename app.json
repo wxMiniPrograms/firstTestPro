@@ -1,6 +1,9 @@
 {
   "pages": [
+    "pages/7chapter/image/image",
     "pages/6chapter/joke/joke",
+    "pages/6chapter/joke-scroll-view/joke-scroll-view",
+    "pages/6chapter/scroll-view/scroll-view",
     "pages/6chapter/textJoke/textJoke",
     "pages/6chapter/request/request",
     "pages/6chapter/setStorageSync/setStorageSync",

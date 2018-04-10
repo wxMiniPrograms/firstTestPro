@@ -1,0 +1,6 @@
+<button bindtap="start">开始</button>
+<button bindtap="pause">暂停</button>
+<button bindtap="go">继续</button>
+<button bindtap="stop"type="warn">停止</button>
+
+<button bindtap='play'>播放</button>

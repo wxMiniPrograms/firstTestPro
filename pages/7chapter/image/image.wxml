@@ -5,4 +5,14 @@
 
 <button bindtap='previewImage'>预览图片</button>
 
+<button bindtap='choose' type='primary'>选择图片</button>
+
+<button bindtap='imgInfo'>图片信息</button>
+
+<button bindtap='getSetting'>授权</button>
+
+<button bindtap='openSetting'>打开设置界面</button>
+
+<button bindtap='authorize'>授权相关</button>
+
 <image src='{{src}}'></image>

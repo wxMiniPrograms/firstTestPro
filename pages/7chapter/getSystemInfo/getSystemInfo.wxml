@@ -1,0 +1,9 @@
+
+<button bindtap='getSystemInfo'>获取信息</button>
+
+<view>手机品牌：{{brand}}</view>
+<view>手机型号：{{model}}</view>
+<view>宽度： {{width}}</view>
+<view>高度： {{height}}</view>
+
+<button bindtap='getNetwork'>获取网络状态</button>

@@ -1,0 +1,4 @@
+<button bindtap='save'>保存图片</button>
+<button bindtap='select' type='primary'>选择图片</button>
+
+<button type='warn' bindtap='set'>Setting</button>

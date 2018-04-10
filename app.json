@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/7chapter/getLocation/getLocation",
+    "pages/7chapter/map/map",
+    "pages/7chapter/getSystemInfo/getSystemInfo",
+    "pages/7chapter/record/record",
+    "pages/7chapter/saveimage/saveimage",
     "pages/7chapter/image/image",
     "pages/6chapter/joke/joke",
     "pages/6chapter/joke-scroll-view/joke-scroll-view",

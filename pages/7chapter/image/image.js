@@ -6,7 +6,8 @@ Page({
    */
   data: {
     src: '',
-    img: ['http://img2.imgtn.bdimg.com/it/u=2298840176,1428087360&fm=27&gp=0.jpg', 'http://img5.imgtn.bdimg.com/it/u=161888459,1712714238&fm=27&gp=0.jpg','http://img0.imgtn.bdimg.com/it/u=3047678049,3860519935&fm=27&gp=0.jpg']
+    img: []
+    // img: ['http://img2.imgtn.bdimg.com/it/u=2298840176,1428087360&fm=27&gp=0.jpg', 'http://img5.imgtn.bdimg.com/it/u=161888459,1712714238&fm=27&gp=0.jpg','http://img0.imgtn.bdimg.com/it/u=3047678049,3860519935&fm=27&gp=0.jpg']
   },
 
   /**
@@ -48,7 +49,7 @@ Page({
     // });
     wx.getSavedFileList({
       success: function(e){
-        console.log(e);
+        // console.log(e);
       }
     });
   },
@@ -61,6 +62,49 @@ Page({
     wx.previewImage({
       urls: this.data.img
     });
+  },
+
+  choose: function(){
+    var {img} = this.data;  //等同于var img = this.data.img;
+    wx.chooseImage({
+      success: (res)=> {
+        var path = res.tempFilePaths; //返回的是一个数组
+        this.setData({
+          img: img.concat(path)
+        });
+      },
+    });
+  },
+
+  imgInfo: function(){
+    wx.getImageInfo({
+      src: '../../../img/swiper-01.jpg',
+      success: function(e){
+        console.log(e);
+      }
+    });
+  },
+
+  getSetting: function(){
+    wx.getSetting({
+      success: function(e){
+        console.log(e);
+      }
+    });
+  },
+
+  openSetting: function(){
+    wx.openSetting({
+      success: function(e){
+        console.log(e);
+      }
+    });
+  },
+
+  authorize: function(){
+    wx.authorize({
+      scope: 'scope.camera',
+    })
   },
 
   /**
